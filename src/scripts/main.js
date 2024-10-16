@@ -2,11 +2,11 @@
 
 // write code here
 function sortList() {
-  const list = [...document.querySelectorAll('li')];
+  const list = [...document.querySelectorAll('ul li')];
 
   list.sort((a, b) => {
-    const item1 = parseInt(a.getAttribute('data-salary').replace(/[\D]/g, ''));
-    const item2 = parseInt(b.getAttribute('data-salary').replace(/[\D]/g, ''));
+    const item1 = parseInt(a.dataset.salary.replace(/[\D]/g, ''));
+    const item2 = parseInt(b.dataset.salary.replace(/[\D]/g, ''));
 
     return item2 - item1;
   });
