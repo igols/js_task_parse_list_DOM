@@ -20,10 +20,10 @@ function getEmployees() {
   const list = [...document.querySelectorAll('ul')];
 
   return list.map((item) => ({
-    name: item.textContent(),
+    name: item.textContent,
     position: item.dataset.position,
-    salary: item.dataset.salary,
-    age: parseInt(item.dataset.salary),
+    salary: parseInt(item.dataset.salary.replace(/[\D]/g, '')),
+    age: parseInt(item.dataset.age),
   }));
 }
 
